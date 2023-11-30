@@ -4,15 +4,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Logo from '../../Images/Logo.png'
+import { useState } from 'react';
+
 
 function Navigation() {
+  const [openMneu, setOpenMenu] = useState(false)
+
+  const toggleMenu = ()=>{
+    setOpenMenu(!openMneu)
+  }
+
   return (
     <div className={classes.body}>
       <div className={classes.NavContainer}>
         <nav className={classes.Navbar}>
           <NavLink to={'/'} className={classes.navbarbrand}href="#"><img src={Logo}/> Real Agent</NavLink>
           <div className={classes.MenuContainer}>
-            <ul id="navMenu" className={classes.navMenu}>
+            <ul id="navMenu" className={`${classes.navMenu} ${openMneu?      classes.active : ''}`}>
               <li className="nav-item">
                 <NavLink to={'/Buy'} className="nav-link active" aria-current="page" href="#">Buy</NavLink>
               </li>
@@ -32,8 +40,9 @@ function Navigation() {
               </div>
             </ul>
           </div>
-          <button className={classes.navbarToggler} type="button" >
-            <i className="fas fa-bars"></i>
+          <button className={classes.navbarToggler} type="button" onClick={toggleMenu}>
+            {openMneu? <i class='bx bx-x'></i> :<i class='bx bx-menu'></i>}
+          
           </button>
 
           {/* </div> */}

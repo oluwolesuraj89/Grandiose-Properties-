@@ -1,0 +1,417 @@
+:root{
+    --background: rgba(255, 255, 255, 0.94); 
+    --Red:#F13D31;
+    --Black:#0B0C0C;
+    --White: #FFF;
+    --border: #C4C4C4;
+    --deep-ash:rgba(15, 140, 186, 0.13);
+
+
+  }
+  ::before,
+  ::after{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+   p {
+    margin: 0 !important;
+  }
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+.body{
+    margin-top: 5rem;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+.herosection{
+    background-image: url('../../Images/HomeheroImg.png');
+    width: 100%;
+    max-height: 596px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    padding-bottom: 150px;
+}
+.main{
+    width: 100%;
+    max-width: 990px;
+    text-align: center;
+    /* background-color: red; */
+}
+.herosection h1{
+    color: var(--White);
+    font-weight: 700;
+    margin-bottom: 64px;
+}
+.taskSectionContainer{
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    /* text-align: left; */
+}
+.buyRentBtns{
+    display: flex;
+    gap: 12px;
+}
+.buyRentBtns button{
+    padding: 6px 10px;
+    border:none;
+    outline: none;
+    font-weight: 600;
+}
+.buy{
+    background-color: var(--deep-ash);
+    border: 1px solid #062589 !important;
+    color: #033548;
+}
+.rent{
+    background-color: rgba(217, 217, 217, 0.58);
+}
+.tasksSection{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* gap: 20px; */
+    margin: 18px 0 13px 0;
+}
+.searchSection{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 421px;
+    /* height: 47px; */
+    padding: 14px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+.searchSection input{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+}
+.tasksSection .select{
+     background-color: var(--background);
+     padding: 14px 10px;
+     max-width: 134px;
+     font-size: 14px;
+     border: 1px solid var(--border);
+    margin-left: 20px;
+}
+.tasksSection button{
+    padding: 10px 14px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: var(--Red);
+    border: none;
+    outline: none;
+}
+.moreOptions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.showtype{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    /* background-color: red; */
+}
+.showtype input{
+    width: 25px;
+    height: 25px;
+    margin: 0;
+}
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 36px;
+
+}
+.FeaturesProperties, 
+.SimilarListings{
+    width: 100%;
+    max-width: 940px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.FeaturesProperties p{
+    padding-bottom: 10px;
+}
+.displayedproperties{
+    width: 100%;
+    display: grid;
+    gap: 19px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.card .image{
+    background-image: url('../../Images/Properties/Property1.png');
+    width:319px;
+    height: 196px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    background-size: cover;
+}
+.card .image::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(19, 18, 18, 0.568);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 31px;
+    z-index: 20;
+}
+.actionsbtns{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    justify-content: flex-end;
+    align-items:end;
+    margin: 24px;
+    color: white;
+}
+.actionsbtns i{
+    font-size: 24px;
+}
+.actionsbtns .next{
+    background-color: white;
+    color: var(--Black);
+    border-radius: 50px;
+    display: flex;
+    justify-content: cen;
+    align-items: center;
+}
+
+.card .image .details{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    bottom: 0;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    color: var(--White);
+    padding:0 16px;
+    font-size: 12px;
+}
+.card .image .details span{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 2px;
+}
+.details p{
+    padding-top: 10px;
+}
+.details img{
+    width: 23px;
+    height: 16px;
+}
+.propertyDetails span{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+}
+.propertyDetails span h6{
+    font-size: 12px;
+    font-weight: 600;
+}
+.propertyDetails  p{
+    font-size: 12px;
+}
+.propertyDetails .price{
+    color: var(--Red);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.SimilarListingsP{
+    width: 100%;
+    text-align: left;
+    padding-bottom: 10px;
+}
+/* .card .image .details2{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    bottom: 0;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    color: var(--White);
+    padding:0 16px;
+    font-size: 12px;
+} */
+/* footer */
+footer{
+    background-color: var(--Red);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footerCont{
+    width: 100%;
+    max-width: 265px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .footerIcons {
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 51px 0 39px 0;
+}
+footer .footerIcons span{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+    border: 1px solid var(--White);
+    border-radius: 30px;
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+    transition: ease 0.5s;
+}
+footer .footerIcons span:hover{
+    background-color: var(--White);
+    color: red;
+}
+footer .footerContent{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+/* Mobile */
+
+@media(max-width:800px){
+    .General{
+        width: 100%;
+        overflow: hidden;
+    }
+    .body{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .herosection{
+        width: 100%;
+        /* margin: 0; */
+        padding: 15px;
+        /* display: none; */
+    }
+    .main{
+        width: 100%;
+        max-width: 990px;
+        text-align: center;
+        /* visibility: hidden; */
+        /* background-color: red; */
+    }
+    .herosection h1{
+        margin: 84px 0 24px 0;
+    }
+    .taskSectionContainer{
+        border-radius: 15px;
+        padding: 15px;
+    }
+    /* .buyRentBtns{
+        display: flex;
+        gap: 12px;
+    } */
+    
+    .tasksSection{
+        overflow: hidden;
+        flex-wrap: wrap;
+        gap: 3px;
+        margin: 10px 0 13px 0;
+    }
+    .searchSection{
+        width: 100%;
+        padding: 14px;
+    }
+
+    .tasksSection .select{
+         background-color: var(--background);
+         padding: 14px 10px;
+         max-width: 134px;
+         font-size: 14px;
+        margin-left: 10px;
+    }
+    /* .tasksSection button{
+        padding: 10px 14px;
+        border-radius: 5px;
+        margin-left: 10px;
+        background-color: var(--Red);
+        border: none;
+        outline: none;
+    } */
+    .moreOptions{
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+    }
+    
+    .section{
+        padding-bottom: 16px;
+    }
+    .displayedproperties{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+    }
+    .SimilarListingsP{
+        text-align: center;
+    }
+    
+    
+    /* .card .image .details span{
+        display: flex;
+        justify-content: flex-start;
+        align-items:center;
+        gap: 2px;
+    } */
+    /* .details p{
+        padding-top: 10px;
+    } */
+    /* .details img{
+        width: 23px;
+        height: 16px;
+    } */
+    /* .propertyDetails span{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 16px;
+    } */
+    
+    
+    
+}
+    
